@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Vertical Infinite Scroll</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        * {
+            margin: 0;
+        }
+
+        .wrapper {
+            width: 100px;
+            /* Width of each item */
+            height: 200px;
+            /* Total height of the scroll area */
+            margin: 5rem auto;
+            /* Centering the wrapper */
+            /* border: 1px solid rgb(168, 114, 47); */
+            overflow: hidden;
+            position: relative;
+            mask-image: linear-gradient(to bottom,
+                    rgba(0, 0, 0, 0),
+                    rgba(0, 0, 0, 1) 20%,
+                    rgba(0, 0, 0, 1) 80%,
+                    rgba(0, 0, 0, 0));
+        }
+
+        .item {
+            width: 100px;
+            /* Width of each item */
+            height: 40px;
+            /* Height of each item */
+            background-color: red;
+            /* Background color for demonstration */
+            border-radius: 6px;
+            /* Rounded corners */
+            position: absolute;
+            top: max(calc(40px * 8), 100%);
+            /* Initially positions items outside the visible area */
+            animation-name: scrollUp;
+            animation-duration: 30s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes scrollUp {
+            to {
+                top: -100px;
+                /* Moves items upwards */
+            }
+        }
+
+        .item-1 {
+            animation-delay: calc(30s / 8 * (8 - 1) * -1);
+        }
+
+        .item-2 {
+            animation-delay: calc(30s / 8 * (8 - 2) * -1);
+        }
+
+        .item-3 {
+            animation-delay: calc(30s / 8 * (8 - 3) * -1);
+        }
+
+        .item-4 {
+            animation-delay: calc(30s / 8 * (8 - 4) * -1);
+        }
+
+        .item-5 {
+            animation-delay: calc(30s / 8 * (8 - 5) * -1);
+        }
+
+        .item-6 {
+            animation-delay: calc(30s / 8 * (8 - 6) * -1);
+        }
+
+        .item-7 {
+            animation-delay: calc(30s / 8 * (8 - 7) * -1);
+        }
+
+        .item-8 {
+            animation-delay: calc(30s / 8 * (8 - 8) * -1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="item item-1"></div>
+        <div class="item item-2"></div>
+        <div class="item item-3"></div>
+        <div class="item item-4"></div>
+        <div class="item item-5"></div>
+        <div class="item item-6"></div>
+        <div class="item item-7"></div>
+        <div class="item item-8"></div>
+    </div>
+</body>
+
+</html>
