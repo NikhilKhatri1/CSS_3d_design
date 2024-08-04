@@ -27,7 +27,7 @@ window.addEventListener('scroll', (event) => {
             tab.classList.add('active');
         }
         else {
-            tab.classList.remove('active');
+            tab.classList.remove('active'); 
         }
     })
 
