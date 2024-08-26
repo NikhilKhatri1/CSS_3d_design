@@ -25,39 +25,39 @@ body {
 }
 
 .banner .bg-1 {
-    background-image: url(../Public/images/0.png);
+    background-image: url(./images/0.png);
 }
 
 .banner .bg-2 {
-    background-image: url(../Public/images/1.png);
+    background-image: url(./images/1.png);
 }
 
 .banner .bg-3 {
-    background-image: url(../Public/images/2.png);
+    background-image: url(./images/2.png);
 }
 
 .banner .bg-4 {
-    background-image: url(../Public/images/3.png);
+    background-image: url(./images/3.png);
 }
 
 .banner .bg-5 {
-    background-image: url(../Public/images/4.png);
+    background-image: url(./images/4.png);
 }
 
 .banner .bg-6 {
-    background-image: url(../Public/images/5.png);
+    background-image: url(./images/5.png);
 }
 
 .banner .bg-7 {
-    background-image: url(../Public/images/6.png);
+    background-image: url(./images/6.png);
 }
 
 .banner .bg-8 {
-    background-image: url(../Public/images/7.png);
+    background-image: url(./images/7.png);
 }
 
 .banner .bg-9 {
-    background-image: url(../Public/images/8.png);
+    background-image: url(./images/8.png);
 }
 
 .banner h1 {
