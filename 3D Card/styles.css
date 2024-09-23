@@ -14,7 +14,7 @@ body {
 }
 
 .card {
-    width: min(370px, 100%);
+    width: min(350px, 100%);
     color: var(--text-color);
     position: relative;
 }
@@ -22,11 +22,14 @@ body {
 .card .author {
     background-color: var(--background-color);
     width: 60%;
-    height: 70px;
+    height: 59px;
+    /* Reduced height */
     display: grid;
     grid-template-columns: 50px 1fr;
-    gap: 20px;
-    padding: 10px;
+    gap: 10px;
+    /* Reduced gap */
+    padding: 9px;
+    /* Reduced padding */
     border-top-left-radius: var(--border-radius);
     border-top-right-radius: var(--border-radius);
 }
@@ -46,7 +49,8 @@ body {
 }
 
 .card .image img {
-    width: 90%;
+    width: 80%;
+    /* Slightly reduce image width */
     transform: rotate(15deg);
     transition: 0.5s;
 }
@@ -57,17 +61,20 @@ body {
 
 .card .info {
     background-color: var(--background-color);
-    padding: 30px;
+    padding: 20px;
+    /* Reduced padding */
     text-align: center;
 }
 
 .card .info .name {
-    font-size: 1.7em;
+    font-size: 1.5em;
+    /* Reduced font size */
 }
 
 .card .more {
     background-color: var(--background-color);
-    padding: 0px 30px 30px;
+    padding: 10px 20px 20px;
+    /* Reduced padding */
     display: flex;
     justify-content: space-between;
     align-items: end;
@@ -87,6 +94,7 @@ body {
     height: 40px;
     border-radius: 50%;
 }
+
 
 .card .more .buttons button:nth-child(2) {
     padding: 0 20px;
@@ -114,13 +122,17 @@ body {
     border-radius: 50%;
 }
 
+.options label {
+    margin: 9px;
+}
+
 .card::before {
     background-color: transparent;
     position: absolute;
     top: 0;
     right: 0;
     width: 40%;
-    height: 70px;
+    height: 60px;
     content: '';
     border-bottom-left-radius: var(--border-radius);
     box-shadow: -30px 30px 0 var(--background-color);
@@ -131,8 +143,7 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    height: 60px;
-    /* content: 'text'; */
+    height: 50px;
     width: calc(40% - 10px);
     border-radius: var(--border-radius);
     display: flex;
@@ -150,6 +161,12 @@ body {
     .card .more {
         box-shadow: 0 10px 0 #ff6723;
     }
+
+    .card .more .buttons button:hover {
+        font-size: 12px;
+        transition: 0.2s;
+        background-color: #ff6723;
+    }
 }
 
 @container style(--isNew:true) {
@@ -159,5 +176,11 @@ body {
 
     .card .more {
         box-shadow: 0 10px 0 #00a6ed;
+    }
+
+    .card .more .buttons button:hover {
+        font-size: 12px;
+        transition: 0.2s;
+        background-color: #00a6ed;
     }
 }
